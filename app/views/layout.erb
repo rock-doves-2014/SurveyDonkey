@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="stylesheet" type="text/css" href="css/reset.css">
-  <link rel="stylesheet" type="text/css" href="css/app.css">
+  <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="/css/app.css">
+ <!--  <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'> -->
+  <link href='http://fonts.googleapis.com/css?family=Dosis:400,700,800' rel='stylesheet' type='text/css'>
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <!-- Comment line above and uncomment line below if working offline -->
@@ -11,10 +13,30 @@
 
   <title>Simple Landing Page</title>
 </head>
-
-  <div class="wrapper">
     <body>
+
+      <header>
+        <div>
+            <img src="/images/donkey.png" alt="">
+            <p class='donkey'>SurveyDonkey</p>
+          <nav>
+            <ul>
+              <% if !current_user %>
+                <li>
+                  <a href="/login">login</a>
+                </li>
+                <li>
+                  <a href="/login">singup</a>
+                </li>
+              <% else %>
+                <li>
+                  <a href="/logout">logout</a>
+                </li>
+              <% end %>
+            </ul>
+          </nav>
+      </div>
+      </header>
       <%= yield %>
     </body>
-  </div>
 </html>
