@@ -1,0 +1,3 @@
+class SurveyQuestion < ActiveRecord::Base
+  # Remember to create a migration!
+end
