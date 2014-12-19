@@ -1,5 +1,7 @@
 class Survey < ActiveRecord::Base
   # Remember to create a migration!
+  validates :title, presence :true
+
   has_many :survey_questions
   has_many :user_surveys 
   has_many :questions, through: :survey_questions 
