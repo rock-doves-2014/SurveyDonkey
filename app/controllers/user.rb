@@ -1,6 +1,6 @@
 get '/login' do
   # return an HTML form for creating a new user
-   erb :'login'
+   erb :'user/login', layout: false
 end
 
 post '/login' do
