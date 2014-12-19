@@ -3,7 +3,7 @@ class CreateSurveys < ActiveRecord::Migration
   	create_table :surveys do |t|
   	  t.string :title
   	  t.text   :description
-  	  t.string :author 
+  	  t.references :user
   	end
 
   end
