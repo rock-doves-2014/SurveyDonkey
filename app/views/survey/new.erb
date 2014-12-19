@@ -1,0 +1,36 @@
+<% if !@survey %>
+
+  <div class='create-survey'>
+    <h2>Create a New Survey</h2>
+
+    <form action='/survey' method='POST'>
+      <h3>Survey Title</h3>
+      <input type='text' name='survey[title]'>
+      <h3>Survey Description</h3>
+      <textarea name='survey[description]'></textarea>
+      <input type='hidden' name='survey[user_id]' value='<%= session[:user_id] %>'>
+      <input type='submit' value='Submit'>
+    </form>
+  </div>
+
+<% else %>
+  <h2><%= @survey.title %></h2>
+  <p><%= @survey.description %></p>
+
+  <div class='create-question'>
+    <h2>Create a New Question</h2>
+
+    <form action='/question' method='POST'>
+      <h3>Question Text</h3>
+      <textarea name='question[content]'></textarea>
+      <h3>Alternatives</h3>
+      <input type='text' name='possibility[1]'>
+      <input type='text' name='possibility[2]'>
+      <input type='text' name='possibility[3]'>
+      <input type='text' name='possibility[4]'>
+      <input type='text' name='possibility[5]'>
+      <input type='hidden' name='survey' value="<%= @survey.id %>">
+      <input type='submit' value='Submit'>
+    </form>
+  </div>
+<% end %>
