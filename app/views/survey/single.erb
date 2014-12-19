@@ -1,1 +1,12 @@
-show.erb
+<h3><%= @survey.title %></h3>
+<p><%= @survey.description %></p>
+
+<% @survey.questions.each do |q| %>
+  <h4><%= q.content %></h4>
+  <form action="/" method="POST">
+  <%q.possibilities.each do |p| %>
+    <input type="radio" name="<%= q.id %>[:answer]" value="<%= p.id %>"> <%= p.option %><br>
+  <% end %>
+    <input type="submit" value="Submit">
+  </form>
+<% end %>
