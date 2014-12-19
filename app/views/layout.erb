@@ -12,9 +12,12 @@
   <title>Simple Landing Page</title>
 </head>
     <body>
-      <a href="/login">login</a>
-      <a href="/singup">singup</a>
-      <a href="/logout">logout</a>
+      <% if !current_user %>
+        <a href="/login">login</a>
+        <a href="/singup">singup</a>
+      <% else %>
+        <a href="/logout">logout</a>
+      <% end %>
       <%= yield %>
     </body>
 </html>
