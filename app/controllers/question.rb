@@ -13,7 +13,8 @@ post '/question' do
   @survey = Survey.find(params[:survey])
   question = @survey.questions.find_or_create_by(params[:question])
   params[:possibility].each do |k, v|
-    question.possibilities.find_or_create_by(option: v)
+    possibility = Possibility.find_or_create_by(option: v)
+    question.possibilities << possibility
   end
   erb :'survey/new'
 end
