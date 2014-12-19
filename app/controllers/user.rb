@@ -4,7 +4,7 @@ get '/login' do
 end
 
 post '/login' do
-  user = User.find(username: params[:user][:username])
+  user = User.find_by(username: params[:user][:username])
   if user && user.authenticate(params[:user][:password])
     session[:user_id] = user.id
     redirect '/'
@@ -22,6 +22,11 @@ post '/singup' do
     # catch error and siplay to user
     redirect '/login'
   end
+end
+
+get '/logout' do
+  session[:user_id] = nil
+   redirect '/'
 end
 
 
