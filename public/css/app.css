@@ -1,4 +1,7 @@
 html{
+  background-color: #F8FFFA;
+}
+body{
   margin: 0 auto;
   width: 90%;
 }
@@ -32,4 +35,7 @@ a{
   color: white;
   padding: 0;
   margin: 0;
+}
+.create_survey_div{
+  text-align: center;
 }
