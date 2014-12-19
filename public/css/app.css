@@ -39,3 +39,12 @@ a{
 .create_survey_div{
   text-align: center;
 }
+a.buttom_survay_home{
+ background-color:#FFCEA6;
+ padding: 1em 3em;
+ text-decoration: none;
+ border-radius: 10px;
+ font-size: 2em;
+ color:#B28864;
+ box-shadow: 2px 2px 5px #B28864;
+}
