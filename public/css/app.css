@@ -35,25 +35,42 @@ a{
   color: white;
   padding: 0;
   margin: 0;
+  text-shadow: 2px 2px 2px grey;
 }
 .create_survey_div{
   text-align: center;
+
+a.buttom_survay_home{
+ background-color:#FFCEA6;
+ padding: 1em 3em;
+ text-decoration: none;
+ border-radius: 10px;
+ font-size: 2em;
+ color:#B28864;
+ box-shadow: 2px 2px 5px #B28864;
 }
-
-
-.loginform ul{
-  padding: 0;
+.create_survey_div{
+  background-color: #BFF5FF;
   margin: 0;
+  height: 500px;
 }
-
-.loginform li{
-  dislplay: inline;
-  float: left;
+p.welcome{
+  margin: 0;
+  padding-top:50px;
+  font-family: helvetica;
+  font-weight: 400;
+  font-size: 50px;
+  color: #3B3B3B;
+  text-shadow: 0.5px 0.5px 2px grey;
 }
-
-
-
-
-
-
+.butt{
+  margin-top: 100px;
+}
+footer{
+  background-color: #404040;
+  height: 50px;
+}
+span{
+  font-size: 60px;
+}
 
