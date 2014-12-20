@@ -39,3 +39,21 @@ a{
 .create_survey_div{
   text-align: center;
 }
+
+
+.loginform ul{
+  padding: 0;
+  margin: 0;
+}
+
+.loginform li{
+  dislplay: inline;
+  float: left;
+}
+
+
+
+
+
+
+
